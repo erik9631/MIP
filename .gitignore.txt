@@ -1,2 +1,0 @@
-*
-!WeaponFactory/*.java
