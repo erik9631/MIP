@@ -1,6 +1,6 @@
 package inventory;
 import java.util.ArrayList;
-
+// crao
 public class Inventory
 {
 	ArrayList<InventoryItem> inv;
