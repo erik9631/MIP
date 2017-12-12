@@ -5,9 +5,8 @@ import backEnd.shopMenu.Holdable;
 
 public class AppCursor extends BaseClass
 {
-	int x;
-	int y;
-	boolean holding;
+	private int x;
+	private int y;
 	private Holdable holdable;
 	private Connectable input;
 	AppCursor()
@@ -42,7 +41,7 @@ public class AppCursor extends BaseClass
 	
 	public void clearHoldable()
 	{
-		this.holdable = null;
+		holdable = null;
 	}
 	
 	private void updateHeld()
