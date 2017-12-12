@@ -7,8 +7,8 @@ import frontEnd.MainFrame;
 public class ApplicationController
 {
 	// Init
-	ArrayList<DefinedBehavior> scene;
-	ArrayList<DefinedBehavior> updatePool;
+	private ArrayList<DefinedBehavior> scene;
+	private ArrayList<DefinedBehavior> updatePool;
 	private long currentTime;
 	private long deltaTime;
 	private int fps;
@@ -23,7 +23,6 @@ public class ApplicationController
 	
 	ApplicationController(MainFrame mainFrame)
 	{
-		//continentGraphicsEnabled = true;
 		scene = new ArrayList<DefinedBehavior>();
 		updatePool = new ArrayList<DefinedBehavior>();
 		DefinedBehavior.setController(this);
@@ -50,7 +49,7 @@ public class ApplicationController
 		return null;
 	}
 	
-	void onUpdate()
+	private void onUpdate()
 	{
 		
 		for(int i = 0; i < scene.size(); i++)
@@ -59,9 +58,7 @@ public class ApplicationController
 			scene.get(i).Draw();
 		}
 		scene.addAll(updatePool);
-		updatePool.clear();
-		//DefinedBehavior.getMainFrame().setTitle("FPS: " + Integer.toString(getFrameRate()));
-		
+		updatePool.clear();		
 	}
 	
 	public long getTicks()
@@ -81,7 +78,7 @@ public class ApplicationController
 		return frameRate;
 	}
 	
-	void Update()
+	protected void Update()
 	{
 		currentTime = System.currentTimeMillis();
 		if(deltaTime <= currentTime)
