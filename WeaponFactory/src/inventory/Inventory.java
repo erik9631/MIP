@@ -1,5 +1,4 @@
 package inventory;
-// Added stuff
 import java.util.ArrayList;
 
 public class Inventory
